@@ -1,0 +1,26 @@
+<section class = 'main-banner' >
+    <div class="main-banner-info">
+        <h1>
+            Lorem Ipsum
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequatur soluta animi culpa! Distinctio rem molestiae exercitationem laudantium fuga, quia unde facere facilis libero, alias maiores velit, quod incidunt explicabo perspiciatis quo iure! Rerum saepe ipsum ea itaque consequuntur dicta.</p>
+        <button (click)="goToContacts()">Contact Us</button>
+    </div>
+    <div class="controls">
+        <button  [attr.data-id] ="0"(click) = "switchBg($event)"></button>
+        <button  [attr.data-id] ="1"(click) = "switchBg($event)"></button>
+        <button  [attr.data-id] ="2"(click) = "switchBg($event)"></button>
+    </div>
+</section>
+<section class="mid">
+    <div class="card" *ngFor="let item of midInfo">
+        <img [src] = "item.img" alt="item.title">
+        <div class="card-text">
+            <h3>{{item.title}}</h3>
+            <p>{{item.about}}</p>
+        </div>
+    </div>
+</section>
+<footer>
+
+</footer>

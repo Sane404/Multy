@@ -1,0 +1,7 @@
+<div class="cont">
+    <div class="image" *ngFor="let item of imageUrls" [style.background-image]="'url(' + item.webformatURL + ')'"(mouseenter)='imageEnter($event)'(mouseleave)='imageLeave($event)'>
+        <div class="large">
+            <button (click)='select(item)'>View Large</button>
+        </div>
+    </div>
+</div>

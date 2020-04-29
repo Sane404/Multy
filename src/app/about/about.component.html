@@ -1,0 +1,36 @@
+<div class="container">
+    <!-- <h1>About us</h1> -->
+    <div class="card" *ngFor="let item of finalImages;let i = index">
+        <div class="pic"[style.background-image]= "'url(' + item + ')'" (click)='grow($event)'></div>
+        <div class="about">
+            <h2>Title {{i + 1}}</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus officiis similique quaerat ducimus velit! Rerum asperiores id est saepe, delectus quae eveniet nihil magnam non totam ipsa amet. Perferendis, molestias!</p>
+        </div>
+    </div>
+    <div class="contacts" id="contacts">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]='12'></agm-map>
+        <div class="details">
+            <h3>Contacts</h3>
+            <div class="details-split">
+                <div class="col-wrap">PHONES
+                    <div>+111111111</div>
+                    <div>+222222222</div>
+                    <div>+333333333</div>
+                    <div>+444444444</div>
+                    <div>+555555555</div>
+                </div>
+                <div class="col-wrap">EMAILS
+                    <div>example@example.com</div>
+                    <div>example@example.com</div>
+                    <div>example@example.com</div>
+                    <div>example@example.com</div>
+                </div>
+                <div class="col-wrap">SOCIALS
+                    <div>facebook.com/example</div>
+                    <div>facebook.com/example</div>
+                    <div>twitter.com/example</div>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div>
