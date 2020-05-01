@@ -9,7 +9,6 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { HttpClientModule} from '@angular/common/http'; 
 import { HomePageDataBase } from './homeData';
 import { GalleryLargeComponent } from './gallery-large/gallery-large.component';
-import { ContactsScrollCheckService } from './contacts-scroll-check.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,7 @@ import { ContactsScrollCheckService } from './contacts-scroll-check.service';
     }),
     HttpClientModule
   ],
-  providers: [HomePageDataBase,ContactsScrollCheckService],
+  providers: [HomePageDataBase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

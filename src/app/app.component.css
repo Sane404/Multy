@@ -3,6 +3,7 @@ header{
     display: flex;
     justify-content: flex-end;
     background-color: #333;
+    border-bottom: 2px solid white;
 }
 header a{
     text-decoration: none;
@@ -16,6 +17,21 @@ header a{
     transition: background-color 1s ease;
     text-align: center;
 }
+.toTop{
+    position: fixed;
+    right:50px; 
+    bottom: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    border:0;
+    background-color: rgb(33, 175, 40);
+    font-size: 40px;
+    line-height: 100px;
+    cursor: pointer;
+    outline: none;
+}
+
 .active{
     background-color: rgb(33, 175, 40);
 }

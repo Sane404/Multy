@@ -23,6 +23,7 @@
     height: 50px;
     width: 130px;
     border: 0;
+    cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
     background-color: rgb(33, 175, 40);
@@ -56,17 +57,20 @@
     min-height: 200px;
 }
 .card img{
-    height: 200px;
-    width: 200px;
-    margin-right: 5px;
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    margin-right: 20px;
     border-radius: 50%;
     transition: transform .5s;
 }
-.card img:hover{
+/* .card img:hover{
     transform: scale(1.1);
-}
+} */
 .card-text{
     border-left: 3px solid #fff;
+    flex:6;
 }
 .card-text h3,
 .card-text p{

@@ -1,18 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { HomePageDataBase } from '../homeData';
 import { Router } from '@angular/router';
-import { ContactsScrollCheckService } from '../contacts-scroll-check.service';
-
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+ 
   midInfo:any[];
   banners:any[];
   carouselClicked:boolean = false;
-  constructor( private getHomePageData:HomePageDataBase,private router:Router,private service:ContactsScrollCheckService) {
+  constructor( private getHomePageData:HomePageDataBase,private router:Router) {
     this.midInfo = this.getHomePageData.getMidData();
     this.banners = this.getHomePageData.getBanners();
    }
@@ -46,8 +45,7 @@ export class HomepageComponent implements OnInit {
     bg.style.backgroundImage = this.banners[id];
     this.carouselClicked = true;
   }
-  goToContacts(){
+  goToAbout(){
     this.router.navigate(["/about"]);
-    this.service.setTrue();
   }
 }

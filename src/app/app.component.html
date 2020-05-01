@@ -5,4 +5,5 @@
     <a routerLink="about"routerLinkActive="active">About</a>
     <a routerLink="gallery"routerLinkActive="active">Gallery</a>
 </header>
+<button *ngIf="showToTop" class="toTop" (click)="goToTop()">^</button>
 <router-outlet></router-outlet>
